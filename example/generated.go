@@ -6,7 +6,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/Khan/genqlient/graphql"
+	"github.com/Interstellar-Lab/genqlient/graphql"
 )
 
 // __getUserInput is used internally by genqlient

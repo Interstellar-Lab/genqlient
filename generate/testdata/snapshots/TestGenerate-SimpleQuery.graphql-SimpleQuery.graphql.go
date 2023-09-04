@@ -3,8 +3,8 @@
 package test
 
 import (
-	"github.com/Khan/genqlient/graphql"
-	"github.com/Khan/genqlient/internal/testutil"
+	"github.com/Interstellar-Lab/genqlient/graphql"
+	"github.com/Interstellar-Lab/genqlient/internal/testutil"
 )
 
 // SimpleQueryResponse is returned by SimpleQuery on success.

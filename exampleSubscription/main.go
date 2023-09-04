@@ -7,7 +7,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/Khan/genqlient/graphql"
+	"github.com/Interstellar-Lab/genqlient/graphql"
 	"github.com/gorilla/websocket"
 )
 

@@ -3,7 +3,7 @@
 package test
 
 import (
-	"github.com/Khan/genqlient/graphql"
+	"github.com/Interstellar-Lab/genqlient/graphql"
 )
 
 // Role is a type a user may have.

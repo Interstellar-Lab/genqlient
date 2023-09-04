@@ -6,8 +6,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/Khan/genqlient/graphql"
-	"github.com/Khan/genqlient/internal/testutil"
+	"github.com/Interstellar-Lab/genqlient/graphql"
+	"github.com/Interstellar-Lab/genqlient/internal/testutil"
 )
 
 // ContentFields includes the GraphQL fields of Content requested by the fragment ContentFields.

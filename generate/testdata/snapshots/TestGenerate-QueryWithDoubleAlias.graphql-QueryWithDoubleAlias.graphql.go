@@ -3,8 +3,8 @@
 package test
 
 import (
-	"github.com/Khan/genqlient/graphql"
-	"github.com/Khan/genqlient/internal/testutil"
+	"github.com/Interstellar-Lab/genqlient/graphql"
+	"github.com/Interstellar-Lab/genqlient/internal/testutil"
 )
 
 // QueryWithDoubleAliasResponse is returned by QueryWithDoubleAlias on success.

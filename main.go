@@ -11,7 +11,7 @@
 package main
 
 import (
-	"github.com/Khan/genqlient/generate"
+	"github.com/Interstellar-Lab/genqlient/generate"
 )
 
 func main() {

@@ -3,7 +3,7 @@
 package test
 
 import (
-	"github.com/Khan/genqlient/graphql"
+	"github.com/Interstellar-Lab/genqlient/graphql"
 )
 
 // QueryWithEnumsOtherUser includes the requested fields of the GraphQL type User.

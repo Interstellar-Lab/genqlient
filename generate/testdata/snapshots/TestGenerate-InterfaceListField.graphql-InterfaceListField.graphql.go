@@ -6,8 +6,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/Khan/genqlient/graphql"
-	"github.com/Khan/genqlient/internal/testutil"
+	"github.com/Interstellar-Lab/genqlient/graphql"
+	"github.com/Interstellar-Lab/genqlient/internal/testutil"
 )
 
 // InterfaceListFieldResponse is returned by InterfaceListField on success.

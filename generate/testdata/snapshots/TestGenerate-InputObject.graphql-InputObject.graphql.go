@@ -7,8 +7,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/Khan/genqlient/graphql"
-	"github.com/Khan/genqlient/internal/testutil"
+	"github.com/Interstellar-Lab/genqlient/graphql"
+	"github.com/Interstellar-Lab/genqlient/internal/testutil"
 )
 
 // InputObjectQueryResponse is returned by InputObjectQuery on success.

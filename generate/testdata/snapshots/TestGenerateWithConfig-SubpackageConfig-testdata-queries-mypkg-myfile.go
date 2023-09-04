@@ -5,7 +5,7 @@ package mypkg
 import (
 	"context"
 
-	"github.com/Khan/genqlient/graphql"
+	"github.com/Interstellar-Lab/genqlient/graphql"
 )
 
 // SimpleQueryResponse is returned by SimpleQuery on success.
