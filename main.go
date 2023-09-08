@@ -2,12 +2,12 @@
 //
 // To run genqlient:
 //
-//	go run github.com/Khan/genqlient
+//	go run github.com/Interstellar-Lab/genqlient
 //
 // For programmatic access, see the "generate" package, below.  For
 // user documentation, see the project [GitHub].
 //
-// [GitHub]: https://github.com/Khan/genqlient
+// [GitHub]: https://github.com/Interstellar-Lab/genqlient
 package main
 
 import (
