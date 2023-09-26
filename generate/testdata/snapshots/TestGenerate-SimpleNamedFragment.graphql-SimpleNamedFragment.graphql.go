@@ -579,6 +579,10 @@ func SimpleNamedFragment(
 		Query:  SimpleNamedFragment_Operation,
 	}
 
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
+	}
+
 	data_ = &SimpleNamedFragmentResponse{}
 	resp_ := &graphql.Response{Data: data_}
 

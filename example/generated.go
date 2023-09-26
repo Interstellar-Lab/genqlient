@@ -4,6 +4,7 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"time"
 
 	"github.com/Khan/genqlient/graphql"
@@ -93,6 +94,10 @@ func getUser(
 		},
 	}
 
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
+	}
+
 	data_ = &getUserResponse{}
 	resp_ := &graphql.Response{Data: data_}
 
@@ -122,6 +127,10 @@ func getViewer(
 	req_ := &graphql.Request{
 		OpName: "getViewer",
 		Query:  getViewer_Operation,
+	}
+
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
 	}
 
 	data_ = &getViewerResponse{}

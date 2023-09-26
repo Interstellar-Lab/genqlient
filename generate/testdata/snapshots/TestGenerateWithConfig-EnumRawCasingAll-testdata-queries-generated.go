@@ -4,6 +4,7 @@ package queries
 
 import (
 	"context"
+	"fmt"
 
 	"github.com/Khan/genqlient/graphql"
 )
@@ -83,6 +84,10 @@ func QueryWithEnums(
 	req_ := &graphql.Request{
 		OpName: "QueryWithEnums",
 		Query:  QueryWithEnums_Operation,
+	}
+
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
 	}
 
 	data_ = &QueryWithEnumsResponse{}

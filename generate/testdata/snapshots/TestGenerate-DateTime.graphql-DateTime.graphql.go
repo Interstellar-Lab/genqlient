@@ -3,6 +3,7 @@
 package test
 
 import (
+	"fmt"
 	"time"
 
 	"github.com/Khan/genqlient/graphql"
@@ -47,6 +48,10 @@ func convertTimezone(
 			Dt: dt,
 			Tz: tz,
 		},
+	}
+
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
 	}
 
 	data_ = &convertTimezoneResponse{}

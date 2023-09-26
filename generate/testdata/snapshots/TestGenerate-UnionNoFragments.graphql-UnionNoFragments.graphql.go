@@ -191,6 +191,10 @@ func UnionNoFragmentsQuery(
 		Query:  UnionNoFragmentsQuery_Operation,
 	}
 
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
+	}
+
 	data_ = &UnionNoFragmentsQueryResponse{}
 	resp_ := &graphql.Response{Data: data_}
 

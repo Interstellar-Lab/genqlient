@@ -312,6 +312,10 @@ func ComplexNamedFragments(
 		Query:  ComplexNamedFragments_Operation,
 	}
 
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
+	}
+
 	data_ = &InnerQueryFragment{}
 	resp_ := &graphql.Response{Data: data_}
 

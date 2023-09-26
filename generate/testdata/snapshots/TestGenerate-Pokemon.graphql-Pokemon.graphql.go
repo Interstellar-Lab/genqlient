@@ -3,6 +3,8 @@
 package test
 
 import (
+	"fmt"
+
 	"github.com/Khan/genqlient/graphql"
 	"github.com/Khan/genqlient/internal/testutil"
 )
@@ -100,6 +102,10 @@ func GetPokemonSiblings(
 		Variables: &__GetPokemonSiblingsInput{
 			Input: input,
 		},
+	}
+
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
 	}
 
 	data_ = &GetPokemonSiblingsResponse{}

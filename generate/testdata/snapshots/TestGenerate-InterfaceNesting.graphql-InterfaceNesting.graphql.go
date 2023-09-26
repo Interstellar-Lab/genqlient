@@ -532,6 +532,10 @@ func InterfaceNesting(
 		Query:  InterfaceNesting_Operation,
 	}
 
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
+	}
+
 	data_ = &InterfaceNestingResponse{}
 	resp_ := &graphql.Response{Data: data_}
 

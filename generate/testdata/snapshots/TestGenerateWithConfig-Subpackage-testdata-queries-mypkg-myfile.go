@@ -4,6 +4,7 @@ package mypkg
 
 import (
 	"context"
+	"fmt"
 
 	"github.com/Khan/genqlient/graphql"
 )
@@ -50,6 +51,10 @@ func SimpleQuery(
 	req_ := &graphql.Request{
 		OpName: "SimpleQuery",
 		Query:  SimpleQuery_Operation,
+	}
+
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
 	}
 
 	data_ = &SimpleQueryResponse{}

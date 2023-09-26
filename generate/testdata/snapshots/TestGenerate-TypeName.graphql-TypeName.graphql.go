@@ -3,6 +3,8 @@
 package test
 
 import (
+	"fmt"
+
 	"github.com/Khan/genqlient/graphql"
 	"github.com/Khan/genqlient/internal/testutil"
 )
@@ -53,6 +55,10 @@ func TypeNameQuery(
 	req_ := &graphql.Request{
 		OpName: "TypeNameQuery",
 		Query:  TypeNameQuery_Operation,
+	}
+
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
 	}
 
 	data_ = &TypeNameQueryResponse{}

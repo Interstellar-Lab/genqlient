@@ -2400,6 +2400,10 @@ func CovariantInterfaceImplementation(
 		Query:  CovariantInterfaceImplementation_Operation,
 	}
 
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
+	}
+
 	data_ = &CovariantInterfaceImplementationResponse{}
 	resp_ := &graphql.Response{Data: data_}
 

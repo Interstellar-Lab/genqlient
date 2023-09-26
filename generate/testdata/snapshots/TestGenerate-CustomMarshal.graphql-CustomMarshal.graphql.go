@@ -196,6 +196,10 @@ func CustomMarshal(
 		},
 	}
 
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
+	}
+
 	data_ = &CustomMarshalResponse{}
 	resp_ := &graphql.Response{Data: data_}
 

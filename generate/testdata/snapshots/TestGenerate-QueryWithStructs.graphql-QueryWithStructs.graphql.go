@@ -3,6 +3,8 @@
 package test
 
 import (
+	"fmt"
+
 	"github.com/Khan/genqlient/graphql"
 )
 
@@ -61,6 +63,10 @@ func QueryWithStructs(
 	req_ := &graphql.Request{
 		OpName: "QueryWithStructs",
 		Query:  QueryWithStructs_Operation,
+	}
+
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
 	}
 
 	data_ = &QueryWithStructsResponse{}

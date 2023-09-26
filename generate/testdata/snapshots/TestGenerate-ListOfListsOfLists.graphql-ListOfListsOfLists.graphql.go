@@ -3,6 +3,8 @@
 package test
 
 import (
+	"fmt"
+
 	"github.com/Khan/genqlient/graphql"
 )
 
@@ -29,6 +31,10 @@ func ListOfListsOfLists(
 	req_ := &graphql.Request{
 		OpName: "ListOfListsOfLists",
 		Query:  ListOfListsOfLists_Operation,
+	}
+
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
 	}
 
 	data_ = &ListOfListsOfListsResponse{}

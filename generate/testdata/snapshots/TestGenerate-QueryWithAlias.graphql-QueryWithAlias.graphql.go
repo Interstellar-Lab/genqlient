@@ -3,6 +3,8 @@
 package test
 
 import (
+	"fmt"
+
 	"github.com/Khan/genqlient/graphql"
 	"github.com/Khan/genqlient/internal/testutil"
 )
@@ -56,6 +58,10 @@ func QueryWithAlias(
 	req_ := &graphql.Request{
 		OpName: "QueryWithAlias",
 		Query:  QueryWithAlias_Operation,
+	}
+
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
 	}
 
 	data_ = &QueryWithAliasResponse{}

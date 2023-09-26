@@ -45,7 +45,7 @@ func main() {
 	switch len(os.Args) {
 	case 1:
 		var viewerResp *getViewerResponse
-		viewerResp, err = getViewer(context.Background(), graphqlClient)
+		viewerResp, err = getViewer(context.Background(), nil)
 		if err != nil {
 			return
 		}

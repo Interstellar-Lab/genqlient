@@ -198,6 +198,10 @@ func unexported(
 		},
 	}
 
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
+	}
+
 	data_ = &unexportedResponse{}
 	resp_ := &graphql.Response{Data: data_}
 

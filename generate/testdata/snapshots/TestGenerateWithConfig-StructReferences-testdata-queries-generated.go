@@ -248,6 +248,10 @@ func InputObjectQuery(
 		},
 	}
 
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
+	}
+
 	data_ = &InputObjectQueryResponse{}
 	resp_ := &graphql.Response{Data: data_}
 
@@ -279,6 +283,10 @@ func QueryWithStructs(
 	req_ := &graphql.Request{
 		OpName: "QueryWithStructs",
 		Query:  QueryWithStructs_Operation,
+	}
+
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
 	}
 
 	data_ = &QueryWithStructsResponse{}

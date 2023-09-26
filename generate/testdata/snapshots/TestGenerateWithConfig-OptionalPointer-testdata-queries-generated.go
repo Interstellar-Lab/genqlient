@@ -4,6 +4,7 @@ package queries
 
 import (
 	"context"
+	"fmt"
 
 	"github.com/Khan/genqlient/graphql"
 )
@@ -161,6 +162,10 @@ func ListInputQuery(
 		},
 	}
 
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
+	}
+
 	data_ = &ListInputQueryResponse{}
 	resp_ := &graphql.Response{Data: data_}
 
@@ -194,6 +199,10 @@ func QueryWithSlices(
 		Query:  QueryWithSlices_Operation,
 	}
 
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
+	}
+
 	data_ = &QueryWithSlicesResponse{}
 	resp_ := &graphql.Response{Data: data_}
 
@@ -225,6 +234,10 @@ func SimpleQueryNoOverride(
 		Query:  SimpleQueryNoOverride_Operation,
 	}
 
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
+	}
+
 	data_ = &SimpleQueryNoOverrideResponse{}
 	resp_ := &graphql.Response{Data: data_}
 
@@ -254,6 +267,10 @@ func SimpleQueryWithPointerFalseOverride(
 	req_ := &graphql.Request{
 		OpName: "SimpleQueryWithPointerFalseOverride",
 		Query:  SimpleQueryWithPointerFalseOverride_Operation,
+	}
+
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
 	}
 
 	data_ = &SimpleQueryWithPointerFalseOverrideResponse{}

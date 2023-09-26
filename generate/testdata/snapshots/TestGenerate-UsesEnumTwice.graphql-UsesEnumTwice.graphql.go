@@ -3,6 +3,8 @@
 package test
 
 import (
+	"fmt"
+
 	"github.com/Khan/genqlient/graphql"
 )
 
@@ -80,6 +82,10 @@ func UsesEnumTwiceQuery(
 	req_ := &graphql.Request{
 		OpName: "UsesEnumTwiceQuery",
 		Query:  UsesEnumTwiceQuery_Operation,
+	}
+
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
 	}
 
 	data_ = &UsesEnumTwiceQueryResponse{}
