@@ -4,6 +4,7 @@ package queries
 
 import (
 	"context"
+	"fmt"
 
 	"github.com/Khan/genqlient/graphql"
 )
@@ -99,6 +100,10 @@ func ListInputQuery(
 		},
 	}
 
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
+	}
+
 	data_ = &ListInputQueryResponse{}
 	resp_ := &graphql.Response{Data: data_}
 
@@ -130,6 +135,10 @@ func QueryWithSlices(
 	req_ := &graphql.Request{
 		OpName: "QueryWithSlices",
 		Query:  QueryWithSlices_Operation,
+	}
+
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
 	}
 
 	data_ = &QueryWithSlicesResponse{}

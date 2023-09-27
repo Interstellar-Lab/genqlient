@@ -5,6 +5,7 @@ package test
 import (
 	"context"
 	"encoding/json"
+	"fmt"
 
 	"github.com/Khan/genqlient/graphql"
 )
@@ -31,6 +32,10 @@ func SimpleSubscription(
 	req_ := &graphql.Request{
 		OpName: "SimpleSubscription",
 		Query:  SimpleSubscription_Operation,
+	}
+
+	if client_ == nil {
+		return nil, nil, fmt.Errorf("got nil graphql.Client")
 	}
 
 	dataChan_ = make(chan SimpleSubscriptionWsResponse, 1)

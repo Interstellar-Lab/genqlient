@@ -225,6 +225,10 @@ func CustomMarshalSlice(
 		},
 	}
 
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
+	}
+
 	data_ = &CustomMarshalSliceResponse{}
 	resp_ := &graphql.Response{Data: data_}
 

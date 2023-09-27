@@ -3,6 +3,8 @@
 package test
 
 import (
+	"fmt"
+
 	"github.com/Khan/genqlient/graphql"
 	"github.com/Khan/genqlient/internal/testutil"
 )
@@ -56,6 +58,10 @@ func QueryWithDoubleAlias(
 	req_ := &graphql.Request{
 		OpName: "QueryWithDoubleAlias",
 		Query:  QueryWithDoubleAlias_Operation,
+	}
+
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
 	}
 
 	data_ = &QueryWithDoubleAliasResponse{}

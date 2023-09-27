@@ -3103,6 +3103,10 @@ func count(
 		Query:  count_Operation,
 	}
 
+	if client_ == nil {
+		return nil, nil, fmt.Errorf("got nil graphql.Client")
+	}
+
 	dataChan_ = make(chan countWsResponse, 1)
 	respChan_ := make(chan json.RawMessage, 1)
 
@@ -3171,6 +3175,10 @@ func createUser(
 		},
 	}
 
+	if client_ == nil {
+		return nil, nil, fmt.Errorf("got nil graphql.Client")
+	}
+
 	data_ = &createUserResponse{}
 	resp_ := &graphql.Response{Data: data_}
 
@@ -3200,6 +3208,10 @@ func failingQuery(
 	req_ := &graphql.Request{
 		OpName: "failingQuery",
 		Query:  failingQuery_Operation,
+	}
+
+	if client_ == nil {
+		return nil, nil, fmt.Errorf("got nil graphql.Client")
 	}
 
 	data_ = &failingQueryResponse{}
@@ -3236,6 +3248,10 @@ func queryWithCustomMarshal(
 		Variables: &__queryWithCustomMarshalInput{
 			Date: date,
 		},
+	}
+
+	if client_ == nil {
+		return nil, nil, fmt.Errorf("got nil graphql.Client")
 	}
 
 	data_ = &queryWithCustomMarshalResponse{}
@@ -3276,6 +3292,10 @@ func queryWithCustomMarshalOptional(
 		},
 	}
 
+	if client_ == nil {
+		return nil, nil, fmt.Errorf("got nil graphql.Client")
+	}
+
 	data_ = &queryWithCustomMarshalOptionalResponse{}
 	resp_ := &graphql.Response{Data: data_}
 
@@ -3310,6 +3330,10 @@ func queryWithCustomMarshalSlice(
 		Variables: &__queryWithCustomMarshalSliceInput{
 			Dates: dates,
 		},
+	}
+
+	if client_ == nil {
+		return nil, nil, fmt.Errorf("got nil graphql.Client")
 	}
 
 	data_ = &queryWithCustomMarshalSliceResponse{}
@@ -3382,6 +3406,10 @@ func queryWithFlatten(
 		},
 	}
 
+	if client_ == nil {
+		return nil, nil, fmt.Errorf("got nil graphql.Client")
+	}
+
 	data_ = &QueryFragment{}
 	resp_ := &graphql.Response{Data: data_}
 
@@ -3446,6 +3474,10 @@ func queryWithFragments(
 		},
 	}
 
+	if client_ == nil {
+		return nil, nil, fmt.Errorf("got nil graphql.Client")
+	}
+
 	data_ = &queryWithFragmentsResponse{}
 	resp_ := &graphql.Response{Data: data_}
 
@@ -3482,6 +3514,10 @@ func queryWithInterfaceListField(
 		},
 	}
 
+	if client_ == nil {
+		return nil, nil, fmt.Errorf("got nil graphql.Client")
+	}
+
 	data_ = &queryWithInterfaceListFieldResponse{}
 	resp_ := &graphql.Response{Data: data_}
 
@@ -3516,6 +3552,10 @@ func queryWithInterfaceListPointerField(
 		Variables: &__queryWithInterfaceListPointerFieldInput{
 			Ids: ids,
 		},
+	}
+
+	if client_ == nil {
+		return nil, nil, fmt.Errorf("got nil graphql.Client")
 	}
 
 	data_ = &queryWithInterfaceListPointerFieldResponse{}
@@ -3556,6 +3596,10 @@ func queryWithInterfaceNoFragments(
 		Variables: &__queryWithInterfaceNoFragmentsInput{
 			Id: id,
 		},
+	}
+
+	if client_ == nil {
+		return nil, nil, fmt.Errorf("got nil graphql.Client")
 	}
 
 	data_ = &queryWithInterfaceNoFragmentsResponse{}
@@ -3622,6 +3666,10 @@ func queryWithNamedFragments(
 		},
 	}
 
+	if client_ == nil {
+		return nil, nil, fmt.Errorf("got nil graphql.Client")
+	}
+
 	data_ = &queryWithNamedFragmentsResponse{}
 	resp_ := &graphql.Response{Data: data_}
 
@@ -3656,6 +3704,10 @@ func queryWithOmitempty(
 		Variables: &__queryWithOmitemptyInput{
 			Id: id,
 		},
+	}
+
+	if client_ == nil {
+		return nil, nil, fmt.Errorf("got nil graphql.Client")
 	}
 
 	data_ = &queryWithOmitemptyResponse{}
@@ -3694,6 +3746,10 @@ func queryWithVariables(
 		},
 	}
 
+	if client_ == nil {
+		return nil, nil, fmt.Errorf("got nil graphql.Client")
+	}
+
 	data_ = &queryWithVariablesResponse{}
 	resp_ := &graphql.Response{Data: data_}
 
@@ -3726,6 +3782,10 @@ func simpleQuery(
 		Query:  simpleQuery_Operation,
 	}
 
+	if client_ == nil {
+		return nil, nil, fmt.Errorf("got nil graphql.Client")
+	}
+
 	data_ = &simpleQueryResponse{}
 	resp_ := &graphql.Response{Data: data_}
 
@@ -3756,6 +3816,10 @@ func simpleQueryExt(
 	req_ := &graphql.Request{
 		OpName: "simpleQueryExt",
 		Query:  simpleQueryExt_Operation,
+	}
+
+	if client_ == nil {
+		return nil, nil, fmt.Errorf("got nil graphql.Client")
 	}
 
 	data_ = &simpleQueryExtResponse{}

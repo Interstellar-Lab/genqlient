@@ -253,6 +253,10 @@ func OmitEmptyQuery(
 		},
 	}
 
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
+	}
+
 	data_ = &OmitEmptyQueryResponse{}
 	resp_ := &graphql.Response{Data: data_}
 

@@ -3,6 +3,8 @@
 package queries
 
 import (
+	"fmt"
+
 	"github.com/Khan/genqlient/graphql"
 	"github.com/Khan/genqlient/internal/testutil"
 )
@@ -52,6 +54,10 @@ func SimpleQuery() (data_ *SimpleQueryResponse, err_ error) {
 	client_, err_ = testutil.GetClientFromNowhere()
 	if err_ != nil {
 		return nil, err_
+	}
+
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
 	}
 
 	data_ = &SimpleQueryResponse{}

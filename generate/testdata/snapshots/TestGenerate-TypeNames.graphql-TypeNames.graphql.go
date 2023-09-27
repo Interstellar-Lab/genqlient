@@ -291,6 +291,10 @@ func TypeNames(
 		Query:  TypeNames_Operation,
 	}
 
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
+	}
+
 	data_ = &Resp{}
 	resp_ := &graphql.Response{Data: data_}
 

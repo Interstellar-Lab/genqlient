@@ -4,6 +4,7 @@ package queries
 
 import (
 	"context"
+	"fmt"
 
 	"github.com/Khan/genqlient/graphql"
 	"github.com/Khan/genqlient/internal/testutil"
@@ -56,6 +57,10 @@ func SimpleQuery(
 	client_, err_ = testutil.GetClientFromContext(ctx_)
 	if err_ != nil {
 		return nil, err_
+	}
+
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
 	}
 
 	data_ = &SimpleQueryResponse{}

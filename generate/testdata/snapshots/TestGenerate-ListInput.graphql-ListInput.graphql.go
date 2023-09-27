@@ -3,6 +3,8 @@
 package test
 
 import (
+	"fmt"
+
 	"github.com/Khan/genqlient/graphql"
 	"github.com/Khan/genqlient/internal/testutil"
 )
@@ -60,6 +62,10 @@ func ListInputQuery(
 		Variables: &__ListInputQueryInput{
 			Names: names,
 		},
+	}
+
+	if client_ == nil {
+		return nil, fmt.Errorf("got nil graphql.Client")
 	}
 
 	data_ = &ListInputQueryResponse{}
