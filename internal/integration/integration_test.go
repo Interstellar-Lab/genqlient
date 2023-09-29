@@ -15,8 +15,8 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 
-	"github.com/Khan/genqlient/graphql"
-	"github.com/Khan/genqlient/internal/integration/server"
+	"github.com/Interstellar-Lab/genqlient/graphql"
+	"github.com/Interstellar-Lab/genqlient/internal/integration/server"
 )
 
 func TestSimpleQuery(t *testing.T) {
@@ -773,4 +773,4 @@ func TestGeneratedCode(t *testing.T) {
 	RunGenerateTest(t, "internal/integration/genqlient.yaml")
 }
 
-//go:generate go run github.com/Khan/genqlient genqlient.yaml
+//go:generate go run github.com/Interstellar-Lab/genqlient genqlient.yaml
