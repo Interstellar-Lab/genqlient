@@ -96,6 +96,7 @@ func (w *webSocketClient) listenWebSocket(respChan chan json.RawMessage) {
 	defer close(respChan)
 	for {
 		_, message, err := w.conn.ReadMessage()
+		fmt.Printf("DEBUG JJ: message=%s\n", string(message))
 		if err != nil {
 			w.errChan <- err
 			return
