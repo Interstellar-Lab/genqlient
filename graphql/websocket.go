@@ -132,8 +132,10 @@ func forwardWebSocketData(respChan chan json.RawMessage, message []byte) error {
 	if err != nil {
 		return err
 	}
+	fmt.Printf("DEBUG JJ message type: %v\n", wsMsg.Type)
 	switch wsMsg.Type {
 	case webSocketTypeNext, webSocketTypeError:
+		fmt.Printf("DEBUG JJ sending on respChan\n")
 		respChan <- wsMsg.Payload
 	default:
 	}
