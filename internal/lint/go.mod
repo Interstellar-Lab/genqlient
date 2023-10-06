@@ -1,4 +1,4 @@
-module github.com/Khan/genqlient/internal/lint
+module github.com/Interstellar-Lab/genqlient/internal/lint
 
 go 1.18
 
