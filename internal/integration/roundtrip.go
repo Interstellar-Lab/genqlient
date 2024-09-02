@@ -13,7 +13,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/Khan/genqlient/graphql"
+	"github.com/Interstellar-Lab/genqlient/graphql"
 	"github.com/gorilla/websocket"
 	"github.com/stretchr/testify/assert"
 )

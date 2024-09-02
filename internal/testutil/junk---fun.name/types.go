@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/Khan/genqlient/graphql"
+	"github.com/Interstellar-Lab/genqlient/graphql"
 )
 
 type ID string

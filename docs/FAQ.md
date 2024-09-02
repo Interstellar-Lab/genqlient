@@ -267,7 +267,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/Khan/genqlient/generate"
+	"github.com/Interstellar-Lab/genqlient/generate"
 	"github.com/suessflorian/gqlfetch"
 )
 
@@ -676,5 +676,5 @@ If genqlient fails with an error `missing go.sum entry for module providing pack
 
 package client
 
-import _ "github.com/Khan/genqlient"
+import _ "github.com/Interstellar-Lab/genqlient"
 ```
